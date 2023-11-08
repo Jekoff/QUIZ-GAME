@@ -3,6 +3,7 @@ const prompt = require("prompt-sync")();
 console.log("Welcome to the computer Hardware Quiz!")
 
 let correct_Answers = 0;
+const total_Questions = 3;
 
 
 const answer1 = prompt("What is the brain of the computer? ");
@@ -39,3 +40,8 @@ if(answer3.toUpperCase() === correct_Answer3.toUpperCase()) {
 } else {
     console.log("incorrect!");
 }
+
+const percent = Math.round((correct_Answers / total_Questions) * 100);
+
+console.log("You got ", correct_Answers,  " questions correct!" )
+console.log("You score", percent.toString() + "%");
